@@ -1,11 +1,14 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    std::string line;
-    while(line.compare("exit") != 0){
-        std::cout << "Enter your height : ";
-        std::getline (std::cin,line);
-        std::cout << "You entered, " << line << "!\n";
+    int feet;
+    int inches;
+    int totalInches;
+    while(true){
+        std::cout << "Enter your height in formate feet [space] inches: ";
+        std::cin >> feet >> inches;
+        totalInches = feet * 12 + inches;
+        std::cout << totalInches << std::endl;
     }
     return 0;
 }
